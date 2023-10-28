@@ -1,0 +1,34 @@
+{
+  "name": "fullstack-javascript-project-44",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions)",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "brain-game": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime.js": "bin/brain-prime.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stepan19999993/fullstack-javascript-project-44.git"
+  },
+  "keywords": [
+    "nope"
+  ],
+  "author": "Hacer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stepan19999993/fullstack-javascript-project-44/issues"
+  },
+  "homepage": "https://github.com/Stepan19999993/fullstack-javascript-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
