@@ -9,7 +9,13 @@ const getNumb = () => { // take numb or -numb
         result = result - (result * 2);
     }
     return result;
+}
 
+const isPrime = (num) => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
+        if(num % i === 0) return false;
+    }
+    return num > 1;
 }
 
 function primeGame() { // game logic
@@ -22,10 +28,10 @@ function primeGame() { // game logic
         const userAnsw= readlineSync.question('Your answer: ');
         let rightAnsw = '';
 
-        if (numb < 0) {
-            rightAnsw = 'no';
-        } else {
+        if (isPrime(numb)) {
             rightAnsw = 'yes';
+        } else {
+            rightAnsw = 'no';
         }
         
         if (userAnsw === rightAnsw) {
