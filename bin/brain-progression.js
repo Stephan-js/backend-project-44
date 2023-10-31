@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 
-const getNumb = () => { // random number (1-100)
+const getNumb = () => { // random number (I cange it many time, cuz I need it!)
     return Math.round(Math.random() * 10); 
 }
 
@@ -14,10 +14,10 @@ function progressGame() { // function game
     console.log('What number is missing in the progression?'); // weclome alert
     for (let i = 0; i < 3; i += 1) { // try win
         let result = [getNumb()];
-        let length = getMinNumb() + 3;
+        let length = getMinNumb() + 5;
         const getAdd = getNumb(); // take what we need
     
-        if (length < 6) {
+        if (length < 5) {
             length = length + 5;
         } // check not be too small
         for (let i = 0; i < length; i += 1) {
