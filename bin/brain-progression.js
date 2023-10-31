@@ -3,7 +3,7 @@
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 
 const getNumb = () => { // random number (1-100)
-    return Math.round(Math.random() * 100); 
+    return Math.round(Math.random() * 10); 
 }
 
 const getMinNumb = () => { // random number (1-10)
