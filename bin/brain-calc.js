@@ -40,7 +40,7 @@ function calculateGame() { // game || function
             console.log('Correct!');
         } else {
             console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-            console.log(`Let's try again, ${userAnsw}!`);
+            console.log(`Let's try again, ${userName}!`);
             return; // return || lose
         }
     }

@@ -12,7 +12,7 @@ function evenGame() { // function || game
         const numb = getNumb();
         console.log('Question: ' + numb); // give question
         
-        const userAnsw= readlineSync.question('Your answer: '); // take answer
+        const userAnsw = readlineSync.question('Your answer: '); // take answer
         let rightAnsw = ''; 
         
         if (numb % 2 === 0) {
@@ -25,7 +25,7 @@ function evenGame() { // function || game
             console.log('Correct!');
         } else {
             console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-            console.log(`Let's try again, ${userAnsw}!`);
+            console.log(`Let's try again, ${userName}!`);
             return; // for lose
         }
     }
