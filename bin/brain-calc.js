@@ -2,19 +2,20 @@
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 
-const getNumb = () => {
+function getNumb() {
     return Math.round(Math.random() * 100); 
-}
+};
 
 function getSing() { // get sing for game
     const chance = getNumb();
     if (chance < 40) {
         return '+';
-    } else if (chance < 80) {
+    } 
+    if (chance < 80) {
         return '-';
-    } else {
-        return '*';
-    }
+    } 
+    
+    return '*';
 }
 
 function calculateGame() { // game || function
@@ -25,7 +26,7 @@ function calculateGame() { // game || function
         const sing = getSing(); // get all things 
         console.log(`Question: ${numb} ${sing} ${numb1}`); // qustion
         
-        const userAnsw= readlineSync.question('Your answer: ');
+        const userAnsw = readlineSync.question('Your answer: ');
         let rightAnsw = 0;
         
         if (sing === '*') {
