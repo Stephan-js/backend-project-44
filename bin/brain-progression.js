@@ -14,12 +14,9 @@ function progressGame() { // function game
     console.log('What number is missing in the progression?'); // weclome alert
     for (let i = 0; i < 3; i += 1) { // try win
         let result = [getNumb()];
-        let length = getMinNumb() + 5;
+        let length = getMinNumb() + 10;
         const getAdd = getNumb(); // take what we need
     
-        if (length < 5) {
-            length = length + 5;
-        } // check not be too small
         for (let i = 0; i < length; i += 1) {
             result.push(result[i] + getAdd);
         } // make array
