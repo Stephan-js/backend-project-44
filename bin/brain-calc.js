@@ -2,10 +2,10 @@
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 import { 
-  myCheackNumbAnsw, 
-  getNumb, 
-  getSing, 
-  getStart 
+  myCheackNumbAnsw,
+  getNumb,
+  getSing,
+  getStart,
 } from './functions.js';
 
 function getRightAnsw(singA, numbA, numb1A) {
