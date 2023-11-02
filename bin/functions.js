@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync'; // take readline-sync to see your answ
+
 function myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame) {
   if (Number(userAnsw) === rightAnsw) { // check answ
     console.log('Correct!');
@@ -20,8 +22,30 @@ function myCheackAnsw(userAnsw, rightAnsw, userNameForGame) {
   return true; // return || lose
 }
 
+function getStart() {
+  console.log('Welcome to the Brain Games!');
+
+  let userName = readlineSync.question('May I have your name? ');
+  if (userName === '') {
+    userName = 'Unknown';
+  }
+  console.log(`Hello, ${userName}!`);
+  return userName;
+}
+
 function getNumb() { // random number (1-100)
   return Math.round(Math.random() * 100);
+}
+
+function getSing() { // get sing for game
+  const chance = getNumb();
+  if (chance < 40) {
+    return '+';
+  }
+  if (chance < 80) {
+    return '-';
+  }
+  return '*';
 }
 
 function getMinNumb() { // random number (1-10)
@@ -39,6 +63,8 @@ function getNumbOrMinesNumb() { // random number (1-10)
 export {
   myCheackNumbAnsw,
   myCheackAnsw,
+  getStart,
+  getSing,
   getMinNumb,
   getNumb,
   getNumbOrMinesNumb,

@@ -1,18 +1,16 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-import { myCheackNumbAnsw, getNumb } from './functions.js';
+import { myCheackNumbAnsw, getNumb, getSing, getStart } from './functions.js';
 
-function getSing() { // get sing for game
-  const chance = getNumb();
-  if (chance < 40) {
-    return '+';
+function getRightAnsw(singA, numbA, numb1A) {
+  if (singA === '-') {
+     return numbA - numb1A;
   }
-  if (chance < 80) {
-    return '-';
+  if (singA === '+') {
+    return numbA + numb1A;
   }
-
-  return '*';
+  return numbA * numb1A;
 }
 
 function calculateGame(userNameForGame) { // game || function
@@ -22,17 +20,9 @@ function calculateGame(userNameForGame) { // game || function
     const numb1 = getNumb();
     const sing = getSing(); // get all things
     console.log(`Question: ${numb} ${sing} ${numb1}`); // qustion
-
+    
     const userAnsw = readlineSync.question('Your answer: ');
-    let rightAnsw = 0;
-
-    if (sing === '*') {
-      rightAnsw = numb * numb1;
-    } else if (sing === '+') {
-      rightAnsw = numb + numb1;
-    } else {
-      rightAnsw = numb - numb1;
-    } // find correct answer
+    const rightAnsw = getRightAnsw(sing, numb, numb1);
 
     if (myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame)) {
       return;
@@ -41,9 +31,6 @@ function calculateGame(userNameForGame) { // game || function
   console.log(`Congratulations, ${userNameForGame}!`); // win
 }
 
-console.log('Welcome to the Brain Games!');
-
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+const userName = getStart();
 
 calculateGame(userName); // start game
