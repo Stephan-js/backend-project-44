@@ -2,7 +2,7 @@ function myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame) {
   if (Number(userAnsw) === rightAnsw) { // check answ
     console.log('Correct!');
     return false;
-  } 
+  }
 
   console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
   console.log(`Let's try again, ${userNameForGame}!`);
