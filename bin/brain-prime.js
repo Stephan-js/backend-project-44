@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import {myCheackAnsw, getNumbOrMinesNumb} from './functions.js';
+import { myCheackAnsw, getNumbOrMinesNumb } from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 
 function isPrime(num) {

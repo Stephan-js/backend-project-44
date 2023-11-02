@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import {myCheackNumbAnsw, getNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
+import { myCheackNumbAnsw, getNumb } from './functions.js';
 
 function getSing() { // get sing for game
   const chance = getNumb();

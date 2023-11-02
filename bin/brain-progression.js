@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import {myCheackNumbAnsw, getMinNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-
+import { myCheackNumbAnsw, getMinNumb } from './functions.js';
 
 function progressGame(userNameForGame) { // function game
   console.log('What number is missing in the progression?'); // weclome alert

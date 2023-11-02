@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import {myCheackAnsw, getNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
+import { myCheackAnsw, getNumb } from './functions.js';
 
 function evenGame(userNameForGame) { // function || game
   console.log('Answer "yes" if the number is even, otherwise answer "no".'); // welcome logo
@@ -20,7 +20,7 @@ function evenGame(userNameForGame) { // function || game
 
     if (myCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
       return;
-    } 
+    }
   }
   console.log(`Congratulations, ${userNameForGame}!`); // You win!
 }
