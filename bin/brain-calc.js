@@ -10,20 +10,20 @@ function getSing() { // get sing for game
   const chance = getNumb();
   if (chance < 40) {
     return '+';
-  } 
+  }
   if (chance < 80) {
     return '-';
-  } 
+  }
 
   return '*';
 }
 
-function calculateGame() { // game || function
+function calculateGame(userNameForGame) { // game || function
   console.log('What is the result of the expression?'); // welcome logo
   for (let i = 0; i < 3; i += 1) {
     const numb = getNumb();
     const numb1 = getNumb();
-    const sing = getSing(); // get all things 
+    const sing = getSing(); // get all things
     console.log(`Question: ${numb} ${sing} ${numb1}`); // qustion
 
     const userAnsw = readlineSync.question('Your answer: ');
@@ -31,21 +31,21 @@ function calculateGame() { // game || function
 
     if (sing === '*') {
       rightAnsw = numb * numb1;
-    } else if (sing === '+'){
+    } else if (sing === '+') {
       rightAnsw = numb + numb1;
     } else { 
       rightAnsw = numb - numb1;
     } // find correct answer
-    
+
     if (Number(userAnsw) === rightAnsw) { // check answ
       console.log('Correct!');
     } else {
       console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${userNameForGame}!`);
       return; // return || lose
     }
   }
-  console.log(`Congratulations, ${userName}!`); // win
+  console.log(`Congratulations, ${userNameForGame}!`); // win
 }
 
 console.log('Welcome to the Brain Games!');
@@ -53,6 +53,5 @@ console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
-calculateGame(); // start game
-
-
+calculateGame(userName); // start game
+// end ;)

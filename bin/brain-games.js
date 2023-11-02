@@ -6,3 +6,4 @@ console.log('Welcome to the Brain Games!'); // Hello log
 const userName = readlineSync.question('May I have your name? '); // take your name
 
 console.log(`Hello, ${userName}!`); // log your name
+// end ;)
