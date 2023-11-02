@@ -12,9 +12,9 @@ function check(numb, numb1) {
   let minNumb = numb;
 
   if (numb > numb1) {
-   maxNumb = numb;
-   minNumb = numb1;
-  } 
+    maxNumb = numb;
+    minNumb = numb1;
+  }
 
   for (let i = 1; i < maxNumb; i += 1) {
     if (maxNumb % i === 0 && minNumb % i === 0) {
@@ -31,8 +31,8 @@ function gcdGame(userNameForGame) {
     const numb1 = getNumb();
     console.log(`Question: ${numb} ${numb1}`);
 
-    const userAnsw= readlineSync.question('Your answer: ');
-    let rightAnsw = check(numb, numb1);
+    const userAnsw = readlineSync.question('Your answer: ');
+    const rightAnsw = check(numb, numb1);
 
     if (Number(userAnsw) === rightAnsw) {
       console.log('Correct!');
@@ -51,4 +51,3 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
 gcdGame(userName);
-// end ;)

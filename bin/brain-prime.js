@@ -11,13 +11,12 @@ function getNumb() { // take numb or -numb
   return result;
 }
 
-const isPrime = (num) => {
-  for (let i = 2, s = Math.sqrt(num); i <= s; i+= 1) {
+function isPrime(num) {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) return false;
   }
   return num > 1;
 }
-
 
 function primeGame(userNameForGame) { // game logic
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -33,7 +32,7 @@ function primeGame(userNameForGame) { // game logic
       rightAnsw = 'yes';
     } else {
       rightAnsw = 'no';
-    }       
+    }
 
     if (userAnsw === rightAnsw) {
       console.log('Correct!');
@@ -52,4 +51,3 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
 primeGame(userName); // start game
-// end ;)

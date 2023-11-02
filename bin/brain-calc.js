@@ -33,7 +33,7 @@ function calculateGame(userNameForGame) { // game || function
       rightAnsw = numb * numb1;
     } else if (sing === '+') {
       rightAnsw = numb + numb1;
-    } else { 
+    } else {
       rightAnsw = numb - numb1;
     } // find correct answer
 
@@ -54,4 +54,3 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
 calculateGame(userName); // start game
-// end ;)
