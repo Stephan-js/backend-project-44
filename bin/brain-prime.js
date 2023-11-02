@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { myCheackAnsw, getNumbOrMinesNumb } from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
+import { myCheackAnsw, getNumbOrMinesNumb } from './functions.js';
 
 function isPrime(num) {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
@@ -28,7 +28,7 @@ function primeGame(userNameForGame) { // game logic
 
     if (myCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
       return;
-    } 
+    }
   }
   console.log(`Congratulations, ${userNameForGame}!`);
 }
