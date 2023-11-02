@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
+import {myCheackNumbAnsw, getNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-
-function getNumb() {
-  return Math.round(Math.random() * 100);
-}
 
 function check(numb, numb1) {
   let result = 0;
@@ -34,11 +31,7 @@ function gcdGame(userNameForGame) {
     const userAnsw = readlineSync.question('Your answer: ');
     const rightAnsw = check(numb, numb1);
 
-    if (Number(userAnsw) === rightAnsw) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-      console.log(`Let's try again, ${userNameForGame}!`);
+    if (myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame)) {
       return;
     }
   }

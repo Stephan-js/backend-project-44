@@ -1,15 +1,7 @@
 #!/usr/bin/env node
 
+import {myCheackAnsw, getNumbOrMinesNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-
-function getNumb() { // take numb or -numb
-  const numb = Math.round(Math.random() * 100);
-  let result = Math.round(Math.random() * 100);
-  if (numb > 50) {
-    result -= (result * 2);
-  }
-  return result;
-}
 
 function isPrime(num) {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
@@ -22,7 +14,7 @@ function primeGame(userNameForGame) { // game logic
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   for (let i = 0; i < 3; i += 1) {
-    const numb = getNumb();
+    const numb = getNumbOrMinesNumb();
     console.log(`Question: ${numb}`);
 
     const userAnsw = readlineSync.question('Your answer: ');
@@ -34,13 +26,9 @@ function primeGame(userNameForGame) { // game logic
       rightAnsw = 'no';
     }
 
-    if (userAnsw === rightAnsw) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-      console.log(`Let's try again, ${userNameForGame}!`);
+    if (myCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
       return;
-    }
+    } 
   }
   console.log(`Congratulations, ${userNameForGame}!`);
 }

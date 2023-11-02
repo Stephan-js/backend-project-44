@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
+import {myCheackNumbAnsw, getNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-
-function getNumb() {
-  return Math.round(Math.random() * 100);
-}
 
 function getSing() { // get sing for game
   const chance = getNumb();
@@ -37,12 +34,8 @@ function calculateGame(userNameForGame) { // game || function
       rightAnsw = numb - numb1;
     } // find correct answer
 
-    if (Number(userAnsw) === rightAnsw) { // check answ
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-      console.log(`Let's try again, ${userNameForGame}!`);
-      return; // return || lose
+    if (myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame)) {
+      return;
     }
   }
   console.log(`Congratulations, ${userNameForGame}!`); // win

@@ -1,21 +1,15 @@
 #!/usr/bin/env node
 
+import {myCheackNumbAnsw, getMinNumb} from './functions.js';
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 
-function getNumb() { // random number (I cange it many time, cuz I need it!)
-  return Math.round(Math.random() * 10);
-}
-
-function getMinNumb() { // random number (1-10)
-  return Math.round(Math.random() * 10);
-}
 
 function progressGame(userNameForGame) { // function game
   console.log('What number is missing in the progression?'); // weclome alert
   for (let i = 0; i < 3; i += 1) { // try win
-    let result = [getNumb()];
+    let result = [getMinNumb()];
     const length = getMinNumb() + 10;
-    const getAdd = getNumb(); // take what we need
+    const getAdd = getMinNumb(); // take what we need
 
     for (let b = 0; b < length; b += 1) {
       result.push(result[b] + getAdd);
@@ -29,14 +23,9 @@ function progressGame(userNameForGame) { // function game
     result = result.join(' '); // array => str
 
     console.log(`Question: ${result}`); // ask qustion
-
     const userAnsw = readlineSync.question('Your answer: '); // take answ
 
-    if (Number(userAnsw) === rightAnsw) { // check answ
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`);
-      console.log(`Let's try again, ${userNameForGame}!`);
+    if (myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame)) {
       return;
     }
   }
