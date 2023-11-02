@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-import { myCheackNumbAnsw, getNumb } from './functions.js';
+import { myCheackNumbAnsw, getNumb, getStart } from './functions.js';
 
-function check(numb, numb1) {
+function getRightAnsw(numb, numb1) {
   let result = 0;
   let maxNumb = numb1;
   let minNumb = numb;
@@ -29,7 +29,7 @@ function gcdGame(userNameForGame) {
     console.log(`Question: ${numb} ${numb1}`);
 
     const userAnsw = readlineSync.question('Your answer: ');
-    const rightAnsw = check(numb, numb1);
+    const rightAnsw = getRightAnsw(numb, numb1);
 
     if (myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame)) {
       return;
@@ -38,9 +38,6 @@ function gcdGame(userNameForGame) {
   console.log(`Congratulations, ${userNameForGame}!`);
 }
 
-console.log('Welcome to the Brain Games!');
-
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+const userName = getStart();
 
 gcdGame(userName);

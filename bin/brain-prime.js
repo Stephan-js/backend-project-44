@@ -1,13 +1,18 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-import { myCheackAnsw, getNumbOrMinesNumb } from './functions.js';
+import {
+  myCheackAnsw,
+  getNumbOrMinesNumb,
+  isPrime,
+  getStart,
+} from './functions.js';
 
-function isPrime(num) {
-  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
-    if (num % i === 0) return false;
+function getRightAnsw(numbA) {
+  if (isPrime(numbA)) {
+    return 'yes';
   }
-  return num > 1;
+  return 'no';
 }
 
 function primeGame(userNameForGame) { // game logic
@@ -18,13 +23,7 @@ function primeGame(userNameForGame) { // game logic
     console.log(`Question: ${numb}`);
 
     const userAnsw = readlineSync.question('Your answer: ');
-    let rightAnsw = '';
-
-    if (isPrime(numb)) {
-      rightAnsw = 'yes';
-    } else {
-      rightAnsw = 'no';
-    }
+    const rightAnsw = getRightAnsw(numb);
 
     if (myCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
       return;
@@ -33,9 +32,6 @@ function primeGame(userNameForGame) { // game logic
   console.log(`Congratulations, ${userNameForGame}!`);
 }
 
-console.log('Welcome to the Brain Games!');
-
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+const userName = getStart();
 
 primeGame(userName); // start game

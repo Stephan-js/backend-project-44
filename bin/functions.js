@@ -37,6 +37,13 @@ function getNumb() { // random number (1-100)
   return Math.round(Math.random() * 100);
 }
 
+function isPrime(num) {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+}
+
 function getSing() { // get sing for game
   const chance = getNumb();
   if (chance < 40) {
@@ -63,6 +70,7 @@ function getNumbOrMinesNumb() { // random number (1-10)
 export {
   myCheackNumbAnsw,
   myCheackAnsw,
+  isPrime,
   getStart,
   getSing,
   getMinNumb,

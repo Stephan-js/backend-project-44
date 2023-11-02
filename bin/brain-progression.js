@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync'; // take readline-sync to see your answ
-import { myCheackNumbAnsw, getMinNumb } from './functions.js';
+import { myCheackNumbAnsw, getMinNumb, getStart } from './functions.js';
 
 function progressGame(userNameForGame) { // function game
   console.log('What number is missing in the progression?'); // weclome alert
@@ -31,9 +31,6 @@ function progressGame(userNameForGame) { // function game
   console.log(`Congratulations, ${userNameForGame}!`); // win logo
 }
 
-console.log('Welcome to the Brain Games!');
-
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
+const userName = getStart();
 
 progressGame(userName); // start
