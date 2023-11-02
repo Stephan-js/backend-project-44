@@ -36,10 +36,10 @@ function getNumbOrMinesNumb() { // random number (1-10)
   return answ;
 }
 
-export { 
-  myCheackNumbAnsw, 
-  myCheackAnsw, 
-  getMinNumb, 
-  getNumb, 
-  getNumbOrMinesNumb 
-}; // Im export my problem :) Now its your problem1 
+export {
+  myCheackNumbAnsw,
+  myCheackAnsw,
+  getMinNumb,
+  getNumb,
+  getNumbOrMinesNumb,
+}; // Im export my problem :) Now its your problem1
