@@ -38,17 +38,6 @@ function getStart() { // start game
   return userName;
 }
 
-function getSing() { // get sing for game
-  const chance = getNumb();
-  if (chance < 40) {
-    return '+';
-  }
-  if (chance < 80) {
-    return '-';
-  }
-  return '*';
-}
-
 function getNumb() { // random number (1-100)
   return Math.round((Math.random() * 100) + 1);
 }
@@ -63,6 +52,17 @@ function getNumbOrMinesNumb() { // random number (1-10)
     answ -= answ * 2;
   }
   return answ;
+}
+
+function getSing() { // get sing for game
+  const chance = getNumb();
+  if (chance < 40) {
+    return '+';
+  }
+  if (chance < 80) {
+    return '-';
+  }
+  return '*';
 }
 
 export {

@@ -8,7 +8,7 @@ import {
 } from './functions.js';
 
 function getArray() {
-  let array = [getMinNumb()];
+  const array = [getMinNumb()];
   const length = getMinNumb() + 10;
   const getAdd = getMinNumb(); // take all what I need
 
@@ -28,14 +28,14 @@ function getRightAnsw() {
   result[hole] = '..'; // change answer
   result = result.join(' '); // array => str
 
-  return { result: result, answer: rightAnsw};
+  return { results: result, answer: rightAnsw };
 }
 
 function progressGame(userNameForGame) { // function game
   console.log('What number is missing in the progression?'); // weclome alert
   for (let i = 0; i < 3; i += 1) { // try win
     const answerAndResult = getRightAnsw();
-    const result = answerAndResult.result;
+    const result = answerAndResult.results;
     const rightAnsw = answerAndResult.answer;
     const question = `Question: ${result}`;
 
