@@ -39,7 +39,6 @@ function getStart(functions) { // start game
   if (functions !== undefined) {
     functions(userName);
   }
-  return;
 }
 
 function getNumb() { // random number (1-100)
