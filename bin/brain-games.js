@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync'; // take readline-sync to see your answ
+import { getStart } from './functions.js';
 
-console.log('Welcome to the Brain Games!'); // Hello log
-const userName = readlineSync.question('May I have your name? '); // take your name
-
-console.log(`Hello, ${userName}!`); // log your names
+getStart(); // log your names, Yep just in one function

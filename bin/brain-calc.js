@@ -1,11 +1,10 @@
 #!/usr/bin/env node
-
-import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 import {
-  myCheackNumbAnsw,
+  getCheackAnsw,
   getNumb,
   getSing,
   getStart,
+  getAnswer,
 } from './functions.js';
 
 function getRightAnsw(singA, numbA, numb1A) {
@@ -24,12 +23,12 @@ function calculateGame(userNameForGame) { // game || function
     const numb = getNumb();
     const numb1 = getNumb();
     const sing = getSing(); // get all things
-    console.log(`Question: ${numb} ${sing} ${numb1}`); // qustion
+    const qustion = `Question: ${numb} ${sing} ${numb1}`; // qustion
 
-    const userAnsw = readlineSync.question('Your answer: ');
+    const userAnsw = getAnswer(qustion);
     const rightAnsw = getRightAnsw(sing, numb, numb1);
 
-    if (myCheackNumbAnsw(userAnsw, rightAnsw, userNameForGame)) {
+    if (getCheackAnsw(userAnsw, rightAnsw, userNameForGame)) {
       return;
     }
   }

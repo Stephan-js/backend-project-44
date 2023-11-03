@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync'; // take readline-sync to see your answ
 import {
-  myCheackAnsw,
+  getCheackAnsw,
   getNumbOrMinesNumb,
   isPrime,
   getStart,
+  getAnswer,
 } from './functions.js';
 
 function getRightAnsw(numbA) {
@@ -20,12 +20,12 @@ function primeGame(userNameForGame) { // game logic
 
   for (let i = 0; i < 3; i += 1) {
     const numb = getNumbOrMinesNumb();
-    console.log(`Question: ${numb}`);
+    const question = `Question: ${numb}`;
 
-    const userAnsw = readlineSync.question('Your answer: ');
+    const userAnsw = getAnswer(question);
     const rightAnsw = getRightAnsw(numb);
 
-    if (myCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
+    if (getCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
       return;
     }
   }
