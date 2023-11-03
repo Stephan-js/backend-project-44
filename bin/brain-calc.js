@@ -35,6 +35,4 @@ function calculateGame(userNameForGame) { // game || function
   console.log(`Congratulations, ${userNameForGame}!`); // win
 }
 
-const userName = getStart();
-
-calculateGame(userName); // start game
+getStart(calculateGame); // start game

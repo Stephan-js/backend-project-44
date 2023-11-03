@@ -32,6 +32,4 @@ function primeGame(userNameForGame) { // game logic
   console.log(`Congratulations, ${userNameForGame}!`);
 }
 
-const userName = getStart();
-
-primeGame(userName); // start game
+getStart(primeGame); // start game

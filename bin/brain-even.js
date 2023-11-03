@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {
-  getCheackAnsw,
+  myCheackAnsw,
   getNumb,
   getStart,
   getAnswer,
@@ -23,13 +23,11 @@ function evenGame(userNameForGame) { // function || game
     const userAnsw = getAnswer(question); // take answer
     const rightAnsw = getRightAnsw(numb);
 
-    if (getCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
+    if (myCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
       return;
     }
   }
   console.log(`Congratulations, ${userNameForGame}!`); // You win!
 }
 
-const userName = getStart();
-
-evenGame(userName); // make game
+getStart(evenGame); // start game

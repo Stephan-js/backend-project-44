@@ -48,6 +48,4 @@ function progressGame(userNameForGame) { // function game
   console.log(`Congratulations, ${userNameForGame}!`); // win logo
 }
 
-const userName = getStart();
-
-progressGame(userName); // start
+getStart(progressGame); // start

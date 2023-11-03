@@ -42,6 +42,4 @@ function gcdGame(userNameForGame) {
   console.log(`Congratulations, ${userNameForGame}!`);
 }
 
-const userName = getStart();
-
-gcdGame(userName);
+getStart(gcdGame); // start game

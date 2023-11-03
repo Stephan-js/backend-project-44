@@ -27,7 +27,7 @@ function getAnswer(qustion) {
   return readlineSync.question('Your answer: '); // take answ
 }
 
-function getStart() { // start game
+function getStart(functions) { // start game
   console.log('Welcome to the Brain Games!');
 
   let userName = readlineSync.question('May I have your name? ');
@@ -35,7 +35,11 @@ function getStart() { // start game
     userName = 'Unknown';
   }
   console.log(`Hello, ${userName}!`);
-  return userName;
+
+  if (functions !== undefined) {
+    functions(userName);
+  }
+  return;
 }
 
 function getNumb() { // random number (1-100)
