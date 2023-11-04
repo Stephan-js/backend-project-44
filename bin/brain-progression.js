@@ -12,8 +12,8 @@ function getArray() {
   const length = getMinNumb() + 10;
   const getAdd = getMinNumb(); // take all what I need
 
-  for (let b = 0; b < length; b += 1) {
-    array.push(array[b] + getAdd);
+  for (let i = 0; i < length; i += 1) {
+    array.push(array[i] + getAdd);
   } // make array
   return array;
 }
@@ -34,14 +34,12 @@ function getRightAnsw() {
 function progressGame(userNameForGame) { // function game
   console.log('What number is missing in the progression?'); // weclome alert
   for (let i = 0; i < 3; i += 1) { // try win
-    const answerAndResult = getRightAnsw();
-    const result = answerAndResult.results;
-    const rightAnsw = answerAndResult.answer;
-    const question = `Question: ${result}`;
+    const answerAndResults = getRightAnsw();
+    const question = `Question: ${answerAndResults.results}`;
 
     const userAnsw = getAnswer(question);
 
-    if (getCheackAnsw(userAnsw, rightAnsw, userNameForGame)) { // cheack answer
+    if (getCheackAnsw(userAnsw, answerAndResults.answer, userNameForGame)) { // cheack answer
       return;
     }
   }
