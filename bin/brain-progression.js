@@ -2,6 +2,7 @@
 
 import {
   getCheackAnsw,
+  getNumb,
   getMinNumb,
   getStart,
   getAnswer,
@@ -10,10 +11,13 @@ import {
 function getArray() {
   const array = [getMinNumb()];
   const length = getMinNumb() + 10;
-  const getAdd = getMinNumb(); // take all what I need
+  let add = getMinNumb(); // take all what I need
+  if (getMinNumb() > 8) { // Hard mode
+    add += add;
+  }
 
   for (let i = 0; i < length; i += 1) {
-    array.push(array[i] + getAdd);
+    array.push(array[i] + add);
   } // make array
   return array;
 }
@@ -22,7 +26,6 @@ function getRightAnsw() {
   let result = getArray();
 
   const hole = result.length - getMinNumb(); // take random numb
-  result = result.sort((a, b) => a - b); // sort array
   const rightAnsw = result[hole]; // find answer
 
   result[hole] = '..'; // change answer
