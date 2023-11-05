@@ -2,7 +2,6 @@
 
 import {
   getCheackAnsw,
-  getNumb,
   getMinNumb,
   getStart,
   getAnswer,
