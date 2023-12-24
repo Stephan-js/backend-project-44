@@ -12,6 +12,9 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 const getRightAnsw = (data) => {
   // Unpackaging the data
   const [numbA, numb1A] = data;
+  if (numbA === numb1A) {
+    return numbA;
+  }
 
   // Let result, min and max numbers
   let result = 1;
