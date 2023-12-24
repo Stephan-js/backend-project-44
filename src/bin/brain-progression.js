@@ -13,7 +13,7 @@ const getString = () => {
   // Get all info for array (string)
   const array = [getRandomInRange(1, 10)];
   const length = getRandomInRange(8, 18);
-  const hole = length - getRandomInRange(0, 7)
+  const hole = length - getRandomInRange(0, 8);
   const add = (getRandomInRange(0, 10) === 10) ? getRandomInRange() : getRandomInRange(1, 10);
 
   // Make big array
@@ -31,13 +31,14 @@ const getRightAnsw = (string) => {
   // String convert to array (back)
   const array = string.split(' ');
   // Use logic + some math
-  const add = (isNaN(array[1] - array[0])) ? array[3] - array[2] : array[1] - array[0];
-  for (let i = 0; i < array.length; i++) {
+  const add = ((array[1] - array[0]).isNaN()) ? array[3] - array[2] : array[1] - array[0];
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] === '..') {
       return Number(array[i - 1]) + add;
     }
   }
-}
+  return;
+};
 
 // Game logic
 const progressGame = () => {

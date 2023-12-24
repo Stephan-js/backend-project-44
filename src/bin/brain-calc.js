@@ -22,7 +22,7 @@ const getSing = () => {
 
 // Find right answer
 const getRightAnsw = (data) => {
-  // Unpackaging the data 
+  // Unpackaging the data
   const [numbA, numb1A, singA] = data;
   // Return right answer
   switch (singA) {
@@ -36,18 +36,18 @@ const getRightAnsw = (data) => {
 };
 
 // Game
-const calculateGame = () => { 
+const calculateGame = () => {
   // Get all number and sing
   const numb = getRandomInRange();
   const numb1 = getRandomInRange();
-  const sing = getSing(); 
+  const sing = getSing();
 
   // Ask question and get answer (user)
-  console.log(`Question: ${numb} ${sing} ${numb1}`); 
+  console.log(`Question: ${numb} ${sing} ${numb1}`);
   const userAnsw = getAnswer();
 
   // Return the packaged question and answer
-  return [[numb, numb1, sing], userAnsw]
+  return [[numb, numb1, sing], userAnsw];
 };
 
 // Expect rule

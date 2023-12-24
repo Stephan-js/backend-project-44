@@ -1,5 +1,5 @@
 // Import one mini function
-import { askName } from "./functions.js";
+import { askName } from './functions.js';
 
 // Import settings
 import { roundsCount, noFailMode, youAlwaysRight } from './settings.js';
@@ -9,9 +9,9 @@ import { roundsCount, noFailMode, youAlwaysRight } from './settings.js';
 * NO CHANGING!
 */
 
-// Check answer 
+// Check answer
 const cheackAnsw = (userAnsw, rightAnsw, userNameForGame) => {
-  if (userAnsw.toLowerCase() === rightAnsw && youAlwaysRight === 0 || Number(userAnsw) === rightAnsw && youAlwaysRight === 0) { 
+  if ((userAnsw.toLowerCase() === rightAnsw || Number(userAnsw) === rightAnsw) && youAlwaysRight === 0) {
     console.log('Correct!');
     return false;
   }
@@ -25,8 +25,8 @@ const cheackAnsw = (userAnsw, rightAnsw, userNameForGame) => {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${userNameForGame}!`);
     return false;
   }
-  return true; 
-}
+  return true;
+};
 
 // Make game logic
 const runEngine = (rules, generateRound, getAnswer) => {
@@ -35,21 +35,21 @@ const runEngine = (rules, generateRound, getAnswer) => {
   console.log(rules);
 
   // Start game some times
-  for (let i = 0; i < roundsCount; i++) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, answer] = generateRound();
     // End game if answer wrong
     if (cheackAnsw(answer, getAnswer(question), name) && noFailMode === 0) {
       return;
-  //    ↑↑
-  // Stop sing
+      // ↑↑
+      //Stop sing
     }
   }
   // Congratulations!
   if (noFailMode === 0 && youAlwaysRight === 0) {
-    console.log(`Congratulations, ${name}!`)
+    console.log(`Congratulations, ${name}!`);
   } else {
     // For cheater
-    console.log('No encouraging to cheaters. ;)')
+    console.log('No encouraging to cheaters. ;)');
   }
 };
 

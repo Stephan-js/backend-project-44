@@ -10,13 +10,13 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 
 // Bad function to find answer...
 const getRightAnsw = (data) => {
-  // Unpackaging the data 
+  // Unpackaging the data
   const [numbA, numb1A] = data;
-  
+
   // Let result, min and max numbers
   let result = 1;
-  let maxNumb = (numb1A > numbA) ? numb1A : numbA;
-  let minNumb = (numb1A > numbA) ? numbA : numb1A;
+  const maxNumb = (numb1A > numbA) ? numb1A : numbA;
+  const minNumb = (numb1A > numbA) ? numbA : numb1A;
 
   // Find greatest divisor
   for (let i = 1; i < maxNumb; i += 1) {
@@ -39,7 +39,7 @@ const gcdGame = () => {
   const userAnsw = getAnswer();
 
   // Return the packaged question and answer
-  return [[numb, numb1], userAnsw]
+  return [[numb, numb1], userAnsw];
 };
 
 // Start engine

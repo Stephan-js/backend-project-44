@@ -28,4 +28,4 @@ const getAnswer = () => readlineSync.question('Your answer: ');
 const getRandomInRange = (min = 0, max = 100) => Math.floor(min + Math.random() * (max - min + 1));
 
 // I'm export my problem... Now it's your problem! ;)
-export { getAnswer, getRandomInRange, askName }; 
+export { getAnswer, getRandomInRange, askName };
