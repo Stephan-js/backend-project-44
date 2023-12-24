@@ -9,9 +9,9 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 */
 
 // VERY simple check code
-const getRightAnsw = (numbA) => {
+function getRightAnsw(numbA) {
   return (numbA % 2 === 0) ? 'yes' : 'no';
-};
+}
 
 // Function or Game
 const evenGame = () => {
