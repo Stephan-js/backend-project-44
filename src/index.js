@@ -11,7 +11,7 @@ import { roundsCount, noFailMode, youAlwaysRight } from './settings.js';
 
 // Check answer
 const cheackAnsw = (userAnsw, rightAnsw, userNameForGame) => {
-  if ((userAnsw.toLowerCase() === rightAnsw || Number(userAnsw) === rightAnsw) && youAlwaysRight === 0) {
+  if ((userAnsw.toLowerCase() === rightAnsw || Number(userAnsw) === rightAnsw) && !youAlwaysRight) {
     console.log('Correct!');
     return false;
   }
@@ -19,7 +19,7 @@ const cheackAnsw = (userAnsw, rightAnsw, userNameForGame) => {
   const answer = (userAnsw === '') ? 'Undefined' : userAnsw;
 
   // Say, what wrong
-  if (youAlwaysRight === 0) {
+  if (!youAlwaysRight) {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnsw}'.\nLet's try again, ${userNameForGame}!`);
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${userNameForGame}!`);
@@ -38,14 +38,14 @@ const runEngine = (rules, generateRound, getAnswer) => {
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, answer] = generateRound();
     // End game if answer wrong
-    if (cheackAnsw(answer, getAnswer(question), name) && noFailMode === 0) {
+    if (cheackAnsw(answer, getAnswer(question), name) && !noFailMode) {
       return;
-      // ↑↑
-      //Stop sing
+      //  ↑↑
+      // Stop sing
     }
   }
   // Congratulations!
-  if (noFailMode === 0 && youAlwaysRight === 0) {
+  if (!noFailMode && !youAlwaysRight) {
     console.log(`Congratulations, ${name}!`);
   } else {
     // For cheater

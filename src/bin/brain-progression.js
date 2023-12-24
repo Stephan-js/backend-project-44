@@ -37,7 +37,7 @@ const getRightAnsw = (string) => {
       return Number(array[i - 1]) + add;
     }
   }
-  return;
+  return true;
 };
 
 // Game logic
