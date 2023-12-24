@@ -8,6 +8,20 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 * NO CHANGING!
 */
 
+// Find greatest divisor
+const findGretestDivision = (maxNumb, minNumb) => {
+  let result = 1;
+
+  for (let i = 1; i < maxNumb; i += 1) {
+    if (maxNumb % i === 0 && minNumb % i === 0) {
+      result = i;
+    }
+  }
+
+  // Return result
+  return result;
+};
+
 // Bad function to find answer...
 const getRightAnsw = (data) => {
   // Unpackaging the data
@@ -17,19 +31,11 @@ const getRightAnsw = (data) => {
   }
 
   // Let result, min and max numbers
-  let result = 1;
   const maxNumb = (numb1A > numbA) ? numb1A : numbA;
   const minNumb = (numb1A > numbA) ? numbA : numb1A;
 
-  // Find greatest divisor
-  for (let i = 1; i < maxNumb; i += 1) {
-    if (maxNumb % i === 0 && minNumb % i === 0) {
-      result = i;
-    }
-  }
-
-  // Return result
-  return result;
+  // P.S. - I split it to two function for better munualty
+  return findGretestDivision(maxNumb, minNumb);
 };
 
 // Rule for game

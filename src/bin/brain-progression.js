@@ -8,24 +8,6 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 * NO CHANGING!
 */
 
-// Make string to game
-const getString = () => {
-  // Get all info for array (string)
-  const array = [getRandomInRange(1, 10)];
-  const length = getRandomInRange(8, 18);
-  const hole = length - getRandomInRange(1, 7);
-  const add = (getRandomInRange(0, 10) === 10) ? getRandomInRange() : getRandomInRange(1, 10);
-
-  // Make big array
-  for (let i = 0; i < length; i += 1) {
-    array.push(array[i] + add);
-  }
-
-  // Make hole and make array to string
-  array[hole] = '..';
-  return array.join(' ');
-};
-
 // Get right answer
 const getRightAnsw = (string) => {
   // String convert to array (back)
@@ -42,7 +24,20 @@ const getRightAnsw = (string) => {
 
 // Game logic
 const progressGame = () => {
-  const string = getString();
+  // Get all info for array (string)
+  const array = [getRandomInRange(1, 10)];
+  const length = getRandomInRange(8, 18);
+  const hole = length - getRandomInRange(1, 7);
+  const add = (getRandomInRange(0, 10) === 10) ? getRandomInRange() : getRandomInRange(1, 10);
+
+  // Make big array
+  for (let i = 0; i < length; i += 1) {
+    array.push(array[i] + add);
+  }
+
+  // Make hole and make array to string
+  array[hole] = '..';
+  const string = array.join(' ');
 
   // Ask qustion
   console.log(`Question: ${string}`);

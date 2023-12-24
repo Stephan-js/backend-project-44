@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Stepan19999993/fullstack-javascript-project-44#readme",
   "dependencies": {
+    "eslint": "^8.56.0",
     "readline-sync": "^1.4.10"
   }
 }
