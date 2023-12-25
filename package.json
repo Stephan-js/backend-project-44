@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Some game for your mind! And it's small project of games. It's makes only for fun!",
   "type": "module",
   "bin": {
@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/Stepan19999993/fullstack-javascript-project-44#readme",
   "dependencies": {
-    "eslint": "^8.56.0",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
   }
 }
