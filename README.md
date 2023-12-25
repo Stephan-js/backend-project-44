@@ -47,12 +47,6 @@ const youAlwaysRight = false;
 make install
 ```
 
-## Publishing
-
-```bash
-make publish
-```
-
 ## Game Commands
 
 ### Running Games
