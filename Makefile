@@ -1,21 +1,19 @@
 install: 
 	npm ci
-	npm eslint
-	npm eslint-config-airbnb-base
-	npm eslint-plugin-import
+	npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import
 publish:
 	npm publish --dry-run
 brain-games:
-	node bin/brain-games.js
+	node src/bin/brain-games.js
 brain-calc:
-	node bin/brain-calc.js
+	node src/bin/brain-games.js
 brain-even:
-	node bin/brain-even.jss
+	node src/bin/brain-games.js
 brain-gcd:
-	node bin/brain-gcd.js
+	node src/bin/brain-games.js
 brain-prime:
-	node bin/brain-prime.js
+	node src/bin/brain-games.js
 brain-progression:
-	node bin/brain-progression.js
-make lint:
+	node src/bin/brain-games.js
+lint:
 	npx eslint .
