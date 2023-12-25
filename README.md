@@ -1,5 +1,3 @@
-Certainly! Here's the complete `README.md` with all sections and commands formatted as code:
-
 ```markdown
 # Brain Games
 
