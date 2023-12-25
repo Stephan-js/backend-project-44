@@ -27,12 +27,6 @@ Welcome to Brain Games - a collection of six interactive console-based JavaScrip
 
 - JavaScript (Node.js)
 
-## Badges
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions)
-<a href="https://codeclimate.com/github/Stepan19999993/fullstack-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/a63658e6920252318329/maintainability"/></a>
-
 ## Project Settings
 
 Modify settings in the `src/settings.js` file:
@@ -147,3 +141,10 @@ This command runs ESLint to check your code for any style or formatting issues.
    This command simulates the publishing process to npm without actually publishing.
 
 Feel free to use these commands to navigate and interact with the Brain Games project.
+
+## Badges
+
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions)
+<a href="https://codeclimate.com/github/Stepan19999993/fullstack-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/a63658e6920252318329/maintainability"/></a>
+
