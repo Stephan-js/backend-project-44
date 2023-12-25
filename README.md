@@ -1,5 +1,3 @@
-## Brain Games
-
 ```markdown
 # Brain Games
 
