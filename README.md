@@ -25,27 +25,26 @@ Welcome to Brain Games - a collection of six interactive console-based JavaScrip
 ## Requirements
 
 - JavaScript (Node.js)
-
-## Project Settings
-
-Modify settings in the `src/settings.js` file:
-
-```javascript
-// You can change the count of rounds
-const roundsCount = 3;
-
-// You can enable "god mode" (no fails). 0 - off ; 1 - on
-const noFailMode = false;
-
-// You can enable "cheat mode" (your answer is right, but you still fail). 0 - off ; 1 - on
-const youAlwaysRight = false;
-```
+- Git
 
 ## Installation
 
-```bash
-make install
-```
+1. **Copy Repository to Your PC:**
+   - Open a terminal window.
+   - Run the following command to clone the repository to your local machine:
+     ```bash
+     git clone https://github.com/Stepan19999993/fullstack-javascript-project-44.git
+     ```
+   - Change into the project directory:
+     ```bash
+     cd fullstack-javascript-project-44
+     ```
+
+2. **Install Dependencies:**
+   - Run the following command to install the project dependencies:
+     ```bash
+     make install
+     ```
 
 ## Game Commands
 
@@ -101,12 +100,6 @@ This command runs ESLint to check your code for any style or formatting issues.
   ```
   This command installs project dependencies using npm.
 
-- **Publishing Dry Run:**
-  ```bash
-  make publish
-  ```
-  This command simulates the publishing of the project to npm but doesn't actually publish it.
-
 ## How to Use Makefile
 
 1. **Install Dependencies:**
@@ -127,13 +120,22 @@ This command runs ESLint to check your code for any style or formatting issues.
    ```
    This command checks your code for style and formatting issues.
 
-4. **Simulate Publishing:**
-   ```bash
-   make publish
-   ```
-   This command simulates the publishing process to npm without actually publishing.
-
 Feel free to use these commands to navigate and interact with the Brain Games project.
+
+## Project Settings
+
+Modify settings in the `src/settings.js` file:
+
+```javascript
+// You can change the count of rounds
+const roundsCount = 3;
+
+// You can enable "god mode" (no fails). 0 - off ; 1 - on
+const noFailMode = false;
+
+// You can enable "cheat mode" (your answer is right, but you still fail). 0 - off ; 1 - on
+const youAlwaysRight = false;
+```
 
 ## Badges
 
