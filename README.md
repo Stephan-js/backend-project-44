@@ -1,4 +1,3 @@
-```markdown
 # Brain Games
 
 Welcome to Brain Games - a collection of six interactive console-based JavaScript games to challenge and entertain your mind.
