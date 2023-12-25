@@ -149,4 +149,3 @@ This command runs ESLint to check your code for any style or formatting issues.
    This command simulates the publishing process to npm without actually publishing.
 
 Feel free to use these commands to navigate and interact with the Brain Games project.
-```
