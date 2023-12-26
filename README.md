@@ -130,10 +130,10 @@ Modify settings in the `src/settings.js` file:
 // You can change the count of rounds
 const roundsCount = 3;
 
-// You can enable "god mode" (no fails). 0 - off ; 1 - on
+// You can enable "god mode" (no fails).
 const noFailMode = false;
 
-// You can enable "cheat mode" (your answer is right, but you still fail). 0 - off ; 1 - on
+// You can enable "cheat mode" (your answer is right, but you still fail).
 const youAlwaysRight = false;
 ```
 
