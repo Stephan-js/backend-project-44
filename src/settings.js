@@ -9,12 +9,12 @@ const roundsCount = 3;
 //                  ↑
 //              Change it!
 
-// You can enable "god mode" (no fails). 0 - off ; 1 - on
+// You can enable "god mode" (no fails).
 const noFailMode = false;
 //                   ↑
 //               Change it!
 
-// You can enable "cheat mod" (your answer are right! But you still fails). 0 - off ; 1 - on
+// You can enable "cheat mod" (your answer are right! But you still fails).
 const youAlwaysRight = false;
 //                       ↑
 //                   Change it!
