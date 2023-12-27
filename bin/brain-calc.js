@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import runEngine from "../src/games/code-calc.js";
+import runEngine from '../src/games/code-calc.js';
 
 /*
 * CODE!

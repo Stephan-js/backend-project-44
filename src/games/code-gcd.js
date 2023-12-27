@@ -6,7 +6,7 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 
 /*
  * GREATEST COMMON DIVISOR (GCD) GAME LOGIC
- * This section defines the logic for a game where the user finds the greatest common divisor of two numbers.
+ * The logic for a game where the user finds the greatest common divisor of two numbers.
 */
 
 // Find the greatest common divisor of two numbers

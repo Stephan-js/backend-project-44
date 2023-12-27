@@ -6,7 +6,7 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 
 /*
  * ARITHMETIC PROGRESSION GAME LOGIC
- * This section defines the logic for a game where the user identifies the missing number in an arithmetic progression.
+ * The logic for a game where the user identifies the missing number in an arithmetic progression.
 */
 
 // Determine and return the correct answer based on the provided string

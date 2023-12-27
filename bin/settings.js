@@ -7,7 +7,7 @@
 const roundsCount = 3;
 // ↑ Change the value to set the desired number of rounds ↑
 
-// Enable "god mode" (no fails). 
+// Enable "god mode" (no fails).
 const noFailMode = false;
 // ↑ Change the value to enable or disable "god mode" ↑
 
