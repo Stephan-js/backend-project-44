@@ -1,31 +1,45 @@
-// Import important functions
-import readlineSync from 'readline-sync'; // take readline-sync to see your answ
+// Import the necessary function from the 'readline-sync' library
+import readlineSync from 'readline-sync';
 
 /*
-* CODE!
-* NO CHANGING!
+ * GAME INITIALIZATION
+ * This section includes the essential functions to initialize the game.
 */
 
-// Simple code to find your name
-const askName = () => {
-  // Welcome alert
+// Function to create a welcome message and prompt the user for their name
+const makeWelcome = () => {
+  // Display a welcome message
   console.log('Welcome to the Brain Games!');
 
+  // Prompt the user for their name
   let userName = readlineSync.question('May I have your name? - ');
-  // For "Unknown" persons
+
+  // Handle the case when the user enters an empty name (default to 'Unknown')
   if (userName === '') {
     userName = 'Unknown';
   }
+
+  // Display a personalized greeting using the user's name
   console.log(`Hello, ${userName}!`);
-  // Return your name
+
+  // Return the user's name
   return userName;
 };
 
-// It's function need only to not import readlineSync for evry file
+/*
+ * COMMON UTILITY FUNCTIONS
+ * This section includes utility functions used throughout the game.
+*/
+
+// Function to get user input for answers
 const getAnswer = () => readlineSync.question('Your answer: ');
 
-// Get random number
+// Function to generate a random number within a specified range
 const getRandomInRange = (min = 0, max = 100) => Math.floor(min + Math.random() * (max - min + 1));
 
-// I'm export my problem... Now it's your problem! ;)
-export { getAnswer, getRandomInRange, askName };
+/*
+ * EXPORTS
+ * Exporting functions to make them accessible in other files.
+ * This allows reusability and modularity.
+*/
+export { getAnswer, getRandomInRange, makeWelcome };

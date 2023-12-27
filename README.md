@@ -124,17 +124,20 @@ Feel free to use these commands to navigate and interact with the Brain Games pr
 
 ## Project Settings
 
-Modify settings in the `src/settings.js` file:
+Modify settings in the `bin/settings.js` file:
 
 ```javascript
-// You can change the count of rounds
+// Change the number of rounds in the game
 const roundsCount = 3;
+// ↑ Change the value to set the desired number of rounds ↑
 
-// You can enable "god mode" (no fails). 0 - off ; 1 - on
+// Enable "god mode" (no fails). 
 const noFailMode = false;
+// ↑ Change the value to enable or disable "god mode" ↑
 
-// You can enable "cheat mode" (your answer is right, but you still fail). 0 - off ; 1 - on
+// Enable "cheat mode" (your answers are considered right, but you still fail).
 const youAlwaysRight = false;
+// ↑ Change the value to enable or disable "cheat mode" ↑
 ```
 
 ## Badges
