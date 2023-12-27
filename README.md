@@ -131,18 +131,18 @@ Modify settings in the `bin/settings.js` file:
 const roundsCount = 3;
 // ↑ Change the value to set the desired number of rounds ↑
 
-// Enable "god mode" (no fails). 
+// Enable "god mode" (no fails). 0 - off; 1 - on
 const noFailMode = false;
 // ↑ Change the value to enable or disable "god mode" ↑
 
-// Enable "cheat mode" (your answers are considered right, but you still fail).
+// Enable "cheat mode" (your answers are considered right, but you still fail). 0 - off; 1 - on
 const youAlwaysRight = false;
 // ↑ Change the value to enable or disable "cheat mode" ↑
 ```
 
 ## Badges
 
-### Hexlet tests and linter status:
+### Test and maintainability:
 [![Actions Status](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions)
 <a href="https://codeclimate.com/github/Stepan19999993/fullstack-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/a63658e6920252318329/maintainability"/></a>
 
