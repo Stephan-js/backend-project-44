@@ -125,6 +125,10 @@ Each game can be executed using the following commands:
   make brain-progression
   ```
 
+### Video example
+
+[![asciicast](https://asciinema.org/a/VAdgVomSE3ncW5RWLMVpAgdG3.svg)](https://asciinema.org/a/VAdgVomSE3ncW5RWLMVpAgdG3)
+
 ### Linting
 
 To lint the project, use the following command:
