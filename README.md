@@ -50,21 +50,21 @@ If you're using Windows, you can use Chocolatey to simplify the installation pro
 3. **Copy Repository to Your PC:**
    - Open a PowerShell window.
    - Run the following command to clone the repository to your local machine:
-     ```PowerShell
+     ```bash
      git clone https://github.com/Stepan19999993/fullstack-javascript-project-44
      ```
    - Change into the project directory:
-     ```PowerShell
+     ```bash
      cd fullstack-javascript-project-44
      ```
 
 4. **Install Project Dependencies:**
    - Run the following command to install the project dependencies:
-     ```powershell
+     ```bash
      make install
      ```
 
-5. ** 
+5. **
 
 ### For Ubuntu
 
