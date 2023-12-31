@@ -25,7 +25,7 @@ const cheackAnsw = (userAnsw, rightAnsw, userNameForGame) => {
     console.log(`'${answer}' is the wrong answer ;(. The correct answer was '${rightAnsw}'.\nLet's try again, ${userNameForGame}!`);
   } else {
     console.log(`'${answer}' is the wrong answer ;(. The correct answer was '${answer}'.\nLet's try again, ${userNameForGame}!`);
-    return false;
+    return true;
   }
 
   // Indicate that the answer was incorrect
@@ -33,7 +33,7 @@ const cheackAnsw = (userAnsw, rightAnsw, userNameForGame) => {
 };
 
 // Run the game engine with provided rules, round generation, and answer retrieval functions
-const runEngine = (rules, generateRound, getAnswer) => {
+const runEngine = (rules, generateRound) => {
   // Get the player's name using the makeWelcome function
   const name = makeWelcome();
   console.log(rules);
@@ -41,10 +41,10 @@ const runEngine = (rules, generateRound, getAnswer) => {
   // Start the game for the specified number of rounds
   for (let i = 0; i < roundsCount; i += 1) {
     // Generate a question and its correct answer for the current round
-    const [question, answer] = generateRound();
+    const [rightAnsw, answer] = generateRound();
 
     // End the game if the answer is incorrect, and noFailMode is not enabled
-    if (cheackAnsw(answer, getAnswer(question), name) && !noFailMode) {
+    if (cheackAnsw(answer, rightAnsw, name) && !noFailMode) {
       return;
       //  ↑↑
       // Stop sing (meme)
@@ -56,7 +56,7 @@ const runEngine = (rules, generateRound, getAnswer) => {
     console.log(`Congratulations, ${name}!`);
   } else {
     // Display a message discouraging cheaters
-    console.log('No encouraging cheaters. ;)');
+    console.log('No encouraging for cheaters. ;)');
   }
 };
 

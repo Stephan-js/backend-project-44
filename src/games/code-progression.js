@@ -9,25 +9,6 @@ import { getRandomInRange, getAnswer } from '../functions.js';
  * The logic for a game where the user identifies the missing number in an arithmetic progression.
 */
 
-// Determine and return the correct answer based on the provided string
-const getRightAnsw = (string) => {
-  // Convert the string to an array
-  const array = string.split(' ');
-
-  // Use logic + some math to find the missing number in the arithmetic progression
-  const add = (Number.isNaN(array[1] - array[0])) ? array[3] - array[2] : array[1] - array[0];
-
-  // Iterate through the array to find the missing number marked with '..'
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === '..') {
-      return Number(array[i - 1]) + add;
-    }
-  }
-
-  // Return true if the missing number is not found (should not happen)
-  return true;
-};
-
 // Generate an arithmetic progression, mark a hole, and return the question-answer pair
 const progressGame = () => {
   // Initialize the array with the first element
@@ -44,6 +25,7 @@ const progressGame = () => {
   }
 
   // Mark the hole and convert the array to a string
+  const rightAnsw = array[hole];
   array[hole] = '..';
   const string = array.join(' ');
 
@@ -54,9 +36,9 @@ const progressGame = () => {
   const userAnsw = getAnswer();
 
   // Return the question-answer pair as an array
-  return [string, userAnsw];
+  return [rightAnsw, userAnsw];
 };
 
 // Set the rule for the arithmetic progression game
 const rule = 'What number is missing in the progression?';
-export default () => { runEngine(rule, progressGame, getRightAnsw); };
+export default () => { runEngine(rule, progressGame); };

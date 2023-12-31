@@ -26,8 +26,50 @@ Welcome to Brain Games - a collection of six interactive console-based JavaScrip
 
 - JavaScript (Node.js)
 - Git
+- Ubuntu (or Choco for Windows)
 
 ## Installation
+
+### For Windows
+
+If you're using Windows, you can use Chocolatey to simplify the installation process.
+
+1. **Install Chocolatey:**
+   - Open PowerShell as an administrator.
+   - Run the following command to install Chocolatey:
+     ```powershell
+     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+     ```
+   - Install GNU Make:
+     ```powershell
+     choco install make
+     ```
+
+2. **Restart PowerShell:**
+   - Close and reopen PowerShell to make sure it recognizes the newly installed Chocolatey.
+
+3. **Copy Repository to Your PC:**
+   - Open a PowerShell window.
+   - Run the following command to clone the repository to your local machine:
+     ```PowerShell
+     git clone https://github.com/Stepan19999993/fullstack-javascript-project-44
+     ```
+   - Change into the project directory:
+     ```PowerShell
+     cd fullstack-javascript-project-44
+     ```
+
+4. **Install Project Dependencies:**
+   - Run the following command to install the project dependencies:
+     ```powershell
+     make install
+     ```
+
+5. ** 
+
+### For Ubuntu
+
+If you're using Ubuntu, you can follow these manual installation steps:
 
 1. **Copy Repository to Your PC:**
    - Open a terminal window.
@@ -40,7 +82,7 @@ Welcome to Brain Games - a collection of six interactive console-based JavaScrip
      cd fullstack-javascript-project-44
      ```
 
-2. **Install Dependencies:**
+2. **Install Project Dependencies:**
    - Run the following command to install the project dependencies:
      ```bash
      make install
@@ -143,6 +185,6 @@ const youAlwaysRight = false;
 ## Badges
 
 ### Test and maintainability:
-[![Actions Status](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions)
+[![Actions Status](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions/workflows/support-check.yml/badge.svg)](https://github.com/Stepan19999993/fullstack-javascript-project-44/actions)
 <a href="https://codeclimate.com/github/Stepan19999993/fullstack-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/a63658e6920252318329/maintainability"/></a>
 

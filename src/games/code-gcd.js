@@ -52,11 +52,12 @@ const gcdGame = () => {
 
   // Get the user's answer
   const userAnsw = getAnswer();
+  const rightAnsw = getRightAnsw([numb, numb1]);
 
   // Return the question-answer pair as an array
-  return [[numb, numb1], userAnsw];
+  return [rightAnsw, userAnsw];
 };
 
 // Set the rule for the greatest common divisor game
 const rule = 'Find the greatest common divisor of given numbers.';
-export default () => { runEngine(rule, gcdGame, getRightAnsw); };
+export default () => { runEngine(rule, gcdGame); };

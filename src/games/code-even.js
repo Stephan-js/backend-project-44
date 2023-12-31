@@ -23,11 +23,12 @@ const evenGame = () => {
 
   // Get the user's answer
   const userAnsw = getAnswer();
+  const rightAnsw = getRightAnsw(numb);
 
   // Return the question-answer pair as an array
-  return [numb, userAnsw];
+  return [rightAnsw, userAnsw];
 };
 
 // Set the rule for the even number game
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-export default () => { runEngine(rule, evenGame, getRightAnsw); };
+export default () => { runEngine(rule, evenGame); };

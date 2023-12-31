@@ -30,11 +30,12 @@ const primeGame = () => {
 
   // Get the user's answer
   const userAnsw = getAnswer();
+  const rightAnsw = getRightAnsw(numb);
 
   // Return the question-answer pair as an array
-  return [numb, userAnsw];
+  return [rightAnsw, userAnsw];
 };
 
 // Set the rule for the prime number game
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-export default () => { runEngine(rule, primeGame, getRightAnsw); };
+export default () => { runEngine(rule, primeGame); };
