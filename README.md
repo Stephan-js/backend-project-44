@@ -26,7 +26,6 @@ Welcome to Brain Games - a collection of six interactive console-based JavaScrip
 
 - JavaScript (Node.js)
 - Git
-- Ubuntu (or Choco for Windows)
 
 ## Installation
 
