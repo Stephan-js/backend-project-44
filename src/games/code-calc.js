@@ -44,7 +44,7 @@ const calculateGame = () => {
 
   // Get the user's answer
   const userAnsw = getAnswer();
-  const rughtAnswer = getRightAnsw([numb, numb1, sing])
+  const rughtAnswer = getRightAnsw([numb, numb1, sing]);
 
   // Return the question-answer pair as an array
   return [rughtAnswer, userAnsw];

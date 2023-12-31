@@ -29,7 +29,7 @@ Welcome to Brain Games - a collection of six interactive console-based JavaScrip
 
 ## Installation
 
-### For Windows
+### Chocolatey Installation (Windows)
 
 If you're using Windows, you can use Chocolatey to simplify the installation process.
 
@@ -64,9 +64,7 @@ If you're using Windows, you can use Chocolatey to simplify the installation pro
      make install
      ```
 
-5. **
-
-### For Ubuntu
+### Manual Installation (Ubuntu)
 
 If you're using Ubuntu, you can follow these manual installation steps:
 
@@ -86,6 +84,10 @@ If you're using Ubuntu, you can follow these manual installation steps:
      ```bash
      make install
      ```
+
+### Video Guide
+
+[![asciicast](https://asciinema.org/a/LmXQCWJjg85QIQDWQAEEvkT2d.svg)](https://asciinema.org/a/LmXQCWJjg85QIQDWQAEEvkT2d)
 
 ## Game Commands
 
