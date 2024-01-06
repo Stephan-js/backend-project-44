@@ -17,8 +17,8 @@ const getRightAnsw = (num) => {
       return false;
     }
   }
-  // Return 'yes' if the number is greater than 1, otherwise 'no'
-  return (num > 1) ? true : false;
+
+  return num > 1;
 };
 
 // Generate a random number, prompt the user, and return the question-answer pair
