@@ -2,7 +2,7 @@
 import runEngine from '../index.js';
 
 // Import utility functions for generating random numbers and getting user answers
-import { getRandomInRange, transferToHumanAnswer } from '../functions.js';
+import { getRandomInRange } from '../functions.js';
 
 /*
  * EVEN NUMBER GAME LOGIC
@@ -10,19 +10,14 @@ import { getRandomInRange, transferToHumanAnswer } from '../functions.js';
 */
 
 // Determine if a number is even and return 'yes' or 'no' accordingly
-function getRightAnsw(numbA) {
-  return (numbA % 2 === 0) ? true : false;
-}
-
-// P.S. I can't use arrow function 'couse linter see error in that.
-
+const getRightAnsw = (numbA) => numbA % 2 === 0;
 
 // Generate a random number, prompt the user, and return the question-answer pair
 const evenGame = () => {
   const numb = getRandomInRange(1, 100);
 
   // Get the user's answer
-  const rightAnsw = transferToHumanAnswer(getRightAnsw(numb));
+  const rightAnsw = getRightAnsw(numb) ? 'yes' : 'no';
   const question = `Question: ${numb}`;
 
   // Return the question-answer pair as an array

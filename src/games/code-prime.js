@@ -2,7 +2,7 @@
 import runEngine from '../index.js';
 
 // Import utility functions for generating random numbers and getting user answers
-import { getRandomInRange, transferToHumanAnswer } from '../functions.js';
+import { getRandomInRange } from '../functions.js';
 
 /*
  * PRIME NUMBER GAME LOGIC
@@ -26,7 +26,7 @@ const primeGame = () => {
   const numb = getRandomInRange(-10, 100);
 
   // Get the user's answer
-  const rightAnsw = transferToHumanAnswer(getRightAnsw(numb));
+  const rightAnsw = getRightAnsw(numb) ? 'yes' : 'no';
   const question = `Question: ${numb}`;
 
   // Return the question-answer pair as an array

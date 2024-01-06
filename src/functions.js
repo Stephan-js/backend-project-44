@@ -34,10 +34,6 @@ const makeWelcome = () => {
 // Function to get user input for answers
 const getAnswer = () => readlineSync.question('Your answer: ');
 
-function transferToHumanAnswer(answ) {
-  return (answ === true) ? 'yes' : 'no';
-}
-
 // Function to generate a random number within a specified range
 const getRandomInRange = (min = 0, max = 100) => Math.floor(min + Math.random() * (max - min + 1));
 
@@ -46,4 +42,4 @@ const getRandomInRange = (min = 0, max = 100) => Math.floor(min + Math.random() 
  * Exporting functions to make them accessible in other files.
  * This allows reusability and modularity.
 */
-export { getAnswer, getRandomInRange, makeWelcome, transferToHumanAnswer };
+export { getAnswer, getRandomInRange, makeWelcome };

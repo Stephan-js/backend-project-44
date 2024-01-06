@@ -30,7 +30,7 @@ const getRightAnsw = (data) => {
     case '*':
       return numbA * numb1A;
     default:
-      throw console.error(`I sad donn't tuch code! (Problem in calc game. Wrong sing!)`);
+      throw console.error('I sad dont tuch code! (Problem in calc game. Wrong sing!)');
   }
 };
 
