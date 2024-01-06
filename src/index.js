@@ -1,8 +1,8 @@
 // Import the makeWelcome function from the 'functions.js' file
-import { makeWelcome } from './functions.js';
+import { makeWelcome, getAnswer } from './functions.js';
 
 // Import settings from the 'settings.js' file
-import { roundsCount, noFailMode, youAlwaysRight } from '../bin/settings.js';
+import { roundsCount, noFailMode, youAlwaysRight } from './settings.js';
 
 /*
  * GAME ENGINE LOGIC
@@ -41,7 +41,11 @@ const runEngine = (rules, generateRound) => {
   // Start the game for the specified number of rounds
   for (let i = 0; i < roundsCount; i += 1) {
     // Generate a question and its correct answer for the current round
-    const [rightAnsw, answer] = generateRound();
+    const [rightAnsw, question] = generateRound();
+
+    // Idk why, it's here
+    console.log(question);
+    const answer = getAnswer();
 
     // End the game if the answer is incorrect, and noFailMode is not enabled
     if (cheackAnsw(answer, rightAnsw, name) && !noFailMode) {

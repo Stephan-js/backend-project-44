@@ -2,7 +2,7 @@
 import runEngine from '../index.js';
 
 // Import utility functions for generating random numbers and getting user answers
-import { getRandomInRange, getAnswer } from '../functions.js';
+import { getRandomInRange } from '../functions.js';
 
 /*
  * ARITHMETIC PROGRESSION GAME LOGIC
@@ -29,14 +29,11 @@ const progressGame = () => {
   array[hole] = '..';
   const string = array.join(' ');
 
-  // Ask the question
-  console.log(`Question: ${string}`);
-
-  // Get the user's answer
-  const userAnsw = getAnswer();
+  // Get the qustion answer
+  const question = `Question: ${string}`;
 
   // Return the question-answer pair as an array
-  return [rightAnsw, userAnsw];
+  return [rightAnsw, question];
 };
 
 // Set the rule for the arithmetic progression game

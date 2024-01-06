@@ -2,7 +2,7 @@
 import runEngine from '../index.js';
 
 // Import utility functions for generating random numbers and getting user answers
-import { getRandomInRange, getAnswer } from '../functions.js';
+import { getRandomInRange, transferToHumanAnswer } from '../functions.js';
 
 /*
  * PRIME NUMBER GAME LOGIC
@@ -14,26 +14,23 @@ const getRightAnsw = (num) => {
   // Use basic math to determine if the number is prime
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
   // Return 'yes' if the number is greater than 1, otherwise 'no'
-  return (num > 1) ? 'yes' : 'no';
+  return (num > 1) ? true : false;
 };
 
 // Generate a random number, prompt the user, and return the question-answer pair
 const primeGame = () => {
   const numb = getRandomInRange(-10, 100);
 
-  // Display the number to the user
-  console.log(`Question: ${numb}`);
-
   // Get the user's answer
-  const userAnsw = getAnswer();
-  const rightAnsw = getRightAnsw(numb);
+  const rightAnsw = transferToHumanAnswer(getRightAnsw(numb));
+  const question = `Question: ${numb}`;
 
   // Return the question-answer pair as an array
-  return [rightAnsw, userAnsw];
+  return [rightAnsw, question];
 };
 
 // Set the rule for the prime number game

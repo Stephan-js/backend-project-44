@@ -2,7 +2,7 @@
 import runEngine from '../index.js';
 
 // Import utility functions for generating random numbers and getting user answers
-import { getRandomInRange, getAnswer } from '../functions.js';
+import { getRandomInRange } from '../functions.js';
 
 /*
  * GREATEST COMMON DIVISOR (GCD) GAME LOGIC
@@ -47,15 +47,12 @@ const gcdGame = () => {
   const numb = getRandomInRange(1);
   const numb1 = getRandomInRange(1);
 
-  // Display the numbers to the user
-  console.log(`Question: ${numb} ${numb1}`);
-
   // Get the user's answer
-  const userAnsw = getAnswer();
   const rightAnsw = getRightAnsw([numb, numb1]);
+  const question = `Question: ${numb} ${numb1}`;
 
   // Return the question-answer pair as an array
-  return [rightAnsw, userAnsw];
+  return [rightAnsw, question];
 };
 
 // Set the rule for the greatest common divisor game

@@ -2,7 +2,7 @@
 import runEngine from '../index.js';
 
 // Import utility functions for generating random numbers and getting user answers
-import { getRandomInRange, getAnswer } from '../functions.js';
+import { getRandomInRange } from '../functions.js';
 
 /*
  * CALCULATION GAME LOGIC
@@ -10,7 +10,7 @@ import { getRandomInRange, getAnswer } from '../functions.js';
 */
 
 // Generate a random arithmetic operation (+, -, or *) for the game
-const getSing = () => {
+const getOperator = () => {
   // Randomly determine the arithmetic operation
   const operators = ['-', '+', '*'];
   return operators[getRandomInRange(0, 2)];
@@ -19,16 +19,18 @@ const getSing = () => {
 // Calculate and return the correct answer based on the provided data (numbers and operation)
 const getRightAnsw = (data) => {
   // Unpack the data into variables
-  const [numbA, numb1A, singA] = data;
+  const [numbA, numb1A, operatorA] = data;
 
   // Return the correct answer based on the arithmetic operation
-  switch (singA) {
+  switch (operatorA) {
     case '-':
       return numbA - numb1A;
     case '+':
       return numbA + numb1A;
-    default:
+    case '*':
       return numbA * numb1A;
+    default:
+      throw console.error(`I sad donn't tuch code! (Problem in calc game. Wrong sing!)`);
   }
 };
 
@@ -37,17 +39,14 @@ const calculateGame = () => {
   // Generate random numbers and an arithmetic operation
   const numb = getRandomInRange();
   const numb1 = getRandomInRange();
-  const sing = getSing();
-
-  // Display the arithmetic expression to the user
-  console.log(`Question: ${numb} ${sing} ${numb1}`);
+  const operator = getOperator();
 
   // Get the user's answer
-  const userAnsw = getAnswer();
-  const rughtAnswer = getRightAnsw([numb, numb1, sing]);
+  const rughtAnswer = getRightAnsw([numb, numb1, operator]);
+  const question = `Question: ${numb} ${operator} ${numb1}`;
 
   // Return the question-answer pair as an array
-  return [rughtAnswer, userAnsw];
+  return [rughtAnswer, question];
 };
 
 // Set the rule for the calculation game

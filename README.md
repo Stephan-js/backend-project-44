@@ -171,7 +171,7 @@ Feel free to use these commands to navigate and interact with the Brain Games pr
 
 ## Project Settings
 
-Modify settings in the `bin/settings.js` file:
+Modify settings in the `src/settings.js` file:
 
 ```javascript
 // Change the number of rounds in the game
