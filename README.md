@@ -64,7 +64,7 @@ If you're using Windows, you can use Chocolatey to simplify the installation pro
      make install
      ```
 
-### Manual Installation (Ubuntu)
+### Manual Installation (Ubuntu / Mac)
 
 If you're using Ubuntu, you can follow these manual installation steps:
 
