@@ -73,10 +73,6 @@ If you're on Windows, you can use Chocolatey to simplify the installation proces
      make install
      ```
 
-### Video Guide
-
-[![asciicast](https://asciinema.org/a/LmXQCWJjg85QIQDWQAEEvkT2d.svg)](https://asciinema.org/a/LmXQCWJjg85QIQDWQAEEvkT2d)
-
 ## Running the Games
 
 Each game can be executed using the following commands:
@@ -110,10 +106,6 @@ Each game can be executed using the following commands:
   ```bash
   make brain-progression
   ```
-
-### Video example
-
-[![asciicast](https://asciinema.org/a/VAdgVomSE3ncW5RWLMVpAgdG3.svg)](https://asciinema.org/a/VAdgVomSE3ncW5RWLMVpAgdG3)
 
 ## Linting
 
