@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "brain-games",
   "version": "4.5.0",
   "description": "Some game for your mind! And it's small project of games. It's makes only for fun!",
   "type": "module",
