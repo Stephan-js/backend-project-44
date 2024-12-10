@@ -1,5 +1,7 @@
 # Brain Games
 
+TODO: update readme file
+
 Welcome to **Brain Games** – a collection of six interactive, console-based JavaScript games designed to challenge and entertain your mind.
 
 TODO: need to change manual
